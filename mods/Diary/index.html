@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h1>Diary</h1>
+	<button onclick="ping()">ping</button>
+  <button onclick="ping2()">ping2</button>
+  <button onclick="connetBirthday()">connetBirthday</button>
+  <a href="../../ui/main.html">转跳</a>
+</body>
+	<script>
+        window.nodeRequire = require;
+        delete window.require;
+        delete window.exports;
+        delete window.module;
+        const {ipcRenderer} = window.nodeRequire('electron')
+        
+        function ping(){
+            ipcRenderer.on('Diary-ping-reply', (event, arg) => {
+              console.log(arg);
+            })
+            ipcRenderer.send('Diary-ping', {'1234567890':'1234567890'})
+        }
+
+        function ping2(){
+            ipcRenderer.on('Birthday-ping-reply', (event, arg) => {
+              console.log(arg);
+            })
+            ipcRenderer.send('Birthday-ping', {'1234567890':'1234567890'})
+        }
+
+        function connetBirthday(){
+            ipcRenderer.on('Diary-connetBirthday-reply', (event, arg) => {
+              console.log(arg);
+            })
+            ipcRenderer.send('Diary-connetBirthday', {'mods_name':'Birthday','function_name':'test'})
+        }
+    </script>
+
+
+</html>

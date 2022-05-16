@@ -9,16 +9,16 @@ let modNames = []
         modNames.push(item)
       }
   })
-console.log(modNames);
+//console.log(modNames);
 
 // 加载mods
 let mods = {}
 for(var i=0;i<modNames.length;i++){
   console.log('Loading ',modNames[i])
-  mods[modNames[i]] = require('../mods/'+modNames[i]+'/main.js')
+  mods[modNames[i]] = require('../mods/'+modNames[i]+'/init.js')
   mods[modNames[i]]['config']['html'] = '../mods/'+modNames[i]+'/'+ mods[modNames[i]]['config']['html']
 }
-console.log(mods);
+//console.log(mods);
 
 // 为界面提供mods名称与页面路径
 function getMods(arg){
@@ -32,8 +32,14 @@ function getMods(arg){
   return result;
 }
 
+// 调用其他模块函数
+function api(arg){
+  return mods[arg.mods_name].api[arg.function_name]()
+}
+
 function run(){
-  //mods.Birthday.test()
+  console.log(mods.Birthday.api);
+  mods.Birthday.api.test();
 }
 
 module.exports.run = run;
