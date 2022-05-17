@@ -3,21 +3,21 @@ b = '\
     <div class="d-flex">\
         <!-- LOGO -->\
         <div class="navbar-brand-box">\
-            <a href="main.html" class="logo logo-dark">\
+            <a href="../../ui/main.html" class="logo logo-dark">\
                 <span class="logo-sm">\
-                    <img src="assets/images/logo.svg" alt="" height="22">\
+                    <img src="../../ui/assets/images/logo.svg" alt="" height="22">\
                 </span>\
                 <span class="logo-lg">\
-                    <img src="assets/images/logo-dark.png" alt="" height="17">\
+                    <img src="../../ui/assets/images/logo-dark.png" alt="" height="17">\
                 </span>\
             </a>\
 \
-            <a href="main.html" class="logo logo-light">\
+            <a href="../../ui/main.html" class="logo logo-light">\
                 <span class="logo-sm">\
-                    <img src="assets/images/logo-sm.png" alt="" height="22">\
+                    <img src="../../ui/assets/images/logo-sm.png" alt="" height="22">\
                 </span>\
                 <span class="logo-lg">\
-                    <img src="assets/images/logo-light.png" alt="" height="18">\
+                    <img src="../../ui/assets/images/logo-light.png" alt="" height="18">\
                 </span>\
             </a>\
         </div>\
@@ -76,33 +76,33 @@ b = '\
         <div class="dropdown d-none d-md-block ml-2">\
             <button type="button" class="btn header-item waves-effect"\
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\
-                <img class="mr-2" src="assets/images/flags/us_flag.jpg" alt="Header Language" height="16"> English <span class="mdi mdi-chevron-down"></span>\
+                <img class="mr-2" src="../../ui/assets/images/flags/us_flag.jpg" alt="Header Language" height="16"> English <span class="mdi mdi-chevron-down"></span>\
             </button>\
             <div class="dropdown-menu dropdown-menu-right">\
     \
                 <!-- item-->\
                 <a href="javascript:void(0);" class="dropdown-item notify-item">\
-                    <img src="assets/images/flags/germany_flag.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle"> German </span>\
+                    <img src="../../ui/assets/images/flags/germany_flag.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle"> German </span>\
                 </a>\
 \
                 <!-- item-->\
                 <a href="javascript:void(0);" class="dropdown-item notify-item">\
-                    <img src="assets/images/flags/italy_flag.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle"> Italian </span>\
+                    <img src="../../ui/assets/images/flags/italy_flag.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle"> Italian </span>\
                 </a>\
 \
                 <!-- item-->\
                 <a href="javascript:void(0);" class="dropdown-item notify-item">\
-                    <img src="assets/images/flags/french_flag.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle"> French </span>\
+                    <img src="../../ui/assets/images/flags/french_flag.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle"> French </span>\
                 </a>\
 \
                 <!-- item-->\
                 <a href="javascript:void(0);" class="dropdown-item notify-item">\
-                    <img src="assets/images/flags/spain_flag.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle"> Spanish </span>\
+                    <img src="../../ui/assets/images/flags/spain_flag.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle"> Spanish </span>\
                 </a>\
 \
                  <!-- item-->\
                  <a href="javascript:void(0);" class="dropdown-item notify-item">\
-                    <img src="assets/images/flags/russia_flag.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle"> Russian </span>\
+                    <img src="../../ui/assets/images/flags/russia_flag.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle"> Russian </span>\
                 </a>\
             </div>\
         </div>\
@@ -234,7 +234,7 @@ b = '\
                 <a class="dropdown-item d-block" href="#"><span class="badge badge-success float-right">11</span><i class="mdi mdi-settings font-size-17 align-middle mr-1"></i> Settings</a>\
                 <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline font-size-17 align-middle mr-1"></i> Lock screen</a>\
                 <div class="dropdown-divider"></div>\
-                <a class="dropdown-item text-danger" href="login.html"><i class="bx bx-power-off font-size-17 align-middle mr-1 text-danger"></i> Logout</a>\
+                <a class="dropdown-item text-danger" href="../../ui/login.html"><i class="bx bx-power-off font-size-17 align-middle mr-1 text-danger"></i> Logout</a>\
             </div>\
         </div>\
 \

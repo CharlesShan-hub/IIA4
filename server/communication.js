@@ -76,6 +76,16 @@ function run(){
     //}
   })
 
+  ipcMain.on('getMods2', (event, arg) => {
+    console.log(arg)
+    event.sender.send('getMods2-reply', loadMods.getMods2(arg))
+    //if(formatValid({arg,keys:[]})==false){
+    //  event.sender.send('getMods-reply', {'valid':false,'recoverpw':false})
+    //}else{
+    //  event.sender.send('getMods-reply', {'valid':true,'recoverpw':loadMods.getMods(arg)})
+    //}
+  })
+
   ipcMain.on('api', (event, arg) => {
     console.log(arg)
     event.returnValue = loadMods.api(arg)

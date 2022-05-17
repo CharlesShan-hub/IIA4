@@ -16,9 +16,10 @@ let mods = {}
 for(var i=0;i<modNames.length;i++){
   console.log('Loading ',modNames[i])
   mods[modNames[i]] = require('../mods/'+modNames[i]+'/init.js')
+  mods[modNames[i]]['config']['html2'] = '../'+modNames[i]+'/'+ mods[modNames[i]]['config']['html']
   mods[modNames[i]]['config']['html'] = '../mods/'+modNames[i]+'/'+ mods[modNames[i]]['config']['html']
 }
-//console.log(mods);
+console.log(mods);
 
 // 为界面提供mods名称与页面路径
 function getMods(arg){
@@ -27,6 +28,16 @@ function getMods(arg){
     result[mods[item]['config']['name']] = {
       //'config': mods[item]['config'],
       'html': mods[item]['config']['html']
+    }
+  }
+  return result;
+}
+function getMods2(arg){
+  let result = {}
+  for(var item in mods){
+    result[mods[item]['config']['name']] = {
+      //'config': mods[item]['config'],
+      'html': mods[item]['config']['html2']
     }
   }
   return result;
@@ -44,3 +55,4 @@ function run(){
 
 module.exports.run = run;
 module.exports.getMods = getMods;
+module.exports.getMods2 = getMods2;

@@ -19,8 +19,8 @@ function createWindow () {
   })
 
   // and load the login.html of the app.
-  mainWindow.loadFile('ui/main.html')
-  //mainWindow.loadFile('ui/blank.html')
+  //mainWindow.loadFile('ui/main.html')
+  mainWindow.loadFile('ui/blank.html')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

@@ -1,4 +1,4 @@
-<!doctype html>
+</html><!doctype html>
 <html lang="en">
 
     <head>
@@ -7,16 +7,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Charles Shan" name="author" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <link rel="shortcut icon" href="../../ui/assets/images/favicon.ico">
 
-        <link href="assets/libs/chartist/chartist.min.css" rel="stylesheet">
+        <link href="../../ui/assets/libs/chartist/chartist.min.css" rel="stylesheet">
 
         <!-- Bootstrap Css -->
-        <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <link href="../../ui/assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->
-        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../ui/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
         <!-- App Css-->
-        <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+        <link href="../../ui/assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -81,6 +81,8 @@
                 <!-- End Page-content -->
 
                 <!--Start Content Here-->
+                <button onclick="ping()">ping</button>
+                <a href="../../ui/main.html">转跳</a>
 
                 <footer class="footer" id="footer">
                 </footer>
@@ -107,43 +109,36 @@
             delete window.exports;
             delete window.module;
         </script>
-        <script src="assets/libs/jquery/jquery.min.js"></script>
-        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
-        <script src="assets/libs/simplebar/simplebar.min.js"></script>
-        <script src="assets/libs/node-waves/waves.min.js"></script>
+        <script src="../../ui/assets/libs/jquery/jquery.min.js"></script>
+        <script src="../../ui/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../../ui/assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="../../ui/assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="../../ui/assets/libs/node-waves/waves.min.js"></script>
 
         <!-- Peity chart-->
-        <script src="assets/libs/peity/jquery.peity.min.js"></script>
+        <script src="../../ui/assets/libs/peity/jquery.peity.min.js"></script>
 
         <!-- Plugin Js-->
-        <script src="assets/libs/chartist/chartist.min.js"></script>
-        <script src="assets/libs/chartist-plugin-tooltips/chartist-plugin-tooltip.min.js"></script>
+        <script src="../../ui/assets/libs/chartist/chartist.min.js"></script>
+        <script src="../../ui/assets/libs/chartist-plugin-tooltips/chartist-plugin-tooltip.min.js"></script>
 
-        <script src="assets/js/pages/dashboard.init.js"></script>
+        <script src="../../ui/assets/js/pages/dashboard.init.js"></script>
 
-        <script src="assets/js/app.js"></script>
-        <script type="text/javascript" src="assets/js/header.js"></script>
-        <script type="text/javascript" src="assets/js/sideBar.js"></script>
-        <script type="text/javascript" src="assets/js/rightBar.js"></script>
-        <script type="text/javascript" src="assets/js/footer.js"></script>
+        <script src="../../ui/assets/js/app.js"></script>
+        <script type="text/javascript" src="../../ui/assets/js/header.js"></script>
+        <script type="text/javascript" src="../../ui/assets/js/sideBar.js"></script>
+        <script type="text/javascript" src="../../ui/assets/js/rightBar.js"></script>
+        <script type="text/javascript" src="../../ui/assets/js/footer.js"></script>
+        <script type="text/javascript" src="../../ui/assets/js/modInit.js"></script>
         <script type="text/javascript">
-            const {ipcRenderer} = window.nodeRequire('electron')
-            //console.log(ipcRenderer.sendSync('synchronous-message', 'ping')) // prints "pong"
-
-            function loadMods(){
-                ipcRenderer.on('getMods-reply', (event, arg) => {
-                  for(var item in arg){
-                    var li = document.createElement('li');
-                    li.innerHTML = "<a href="+arg[item].html+">"+item+"</a>"
-                    document.getElementById("ModsSideList").appendChild(li)
-                  }
-                })
-                ipcRenderer.send('getMods', {})
+            ipcRenderer.on('Birthday-ping-reply', (event, arg) => {
+                console.log(arg);
+              })
+            function ping(){
+                ipcRenderer.send('Birthday-ping', {'1234567890':'1234567890'})
             }
-            loadMods();
-            
         </script>
+
 
     </body>
 
